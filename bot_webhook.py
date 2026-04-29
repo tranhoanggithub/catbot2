@@ -12,7 +12,7 @@ app_bot = Application.builder().token(TOKEN).build()
 async def get_cat_image():
     url = "https://api.thecatapi.com/v1/images/search"
     async with httpx.AsyncClient() as client:
-        response = await client.get(url)
+        response = await client.get(url)    
         data = response.json()
         return data[0]['url']
 
